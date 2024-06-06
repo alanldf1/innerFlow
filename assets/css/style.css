@@ -1,0 +1,627 @@
+*{
+    font-family: 'poppins';
+}
+body{
+    margin: 0;
+}
+.pointer{
+    cursor: pointer!important;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+header{
+    justify-content: center;
+    display: grid;
+    padding: 35px 10%;
+    margin-bottom: -150px;
+    position: relative;
+    z-index: 3;
+}
+header .logo img{ 
+    width: 125px;
+}
+header .access{
+    display: none;
+}
+header .access button{
+    float: right;
+}
+.btn-outline-transparent{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 17px;
+}
+.btn-outline-transparent:hover{
+    background-color: #fff;
+    border: 2px solid transparent;
+    color: #341673;
+}
+.panel{
+    min-height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+}
+.top-title{
+    width: 100%;
+    margin: 40px 0;
+}
+.top-title h2{
+    text-align: center;
+    font-size: 20px;
+}
+.white-bk .top-title h2{
+    color: #341673;
+}
+hr{
+    border: none;
+    height: 2px;
+}
+
+/* Painel de introdução ao emprezaz */
+#panel-intro{
+    background-image: url(../img/banner-mobile-1.png);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0px -12px 10px 12px #0000007d;
+    z-index: 2;
+    position: relative;
+    flex-direction: column;
+}
+#panel-intro *,
+#panel-about *,
+#panel-collaborators *,
+#panel-contact *{
+    color: #fff;
+}
+#panel-intro .development p{
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+#panel-intro .box-btn{
+    margin-top: 100px;
+}
+#panel-intro .btn-blue-gradient{
+    background: #00152e;
+    border: 1px solid transparent;
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px 40px;
+    width: 300px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s all;
+}
+.drag-down{
+    margin-top: 130px;
+}
+.drag-down img{
+    width: 30px;
+    height: 30px;
+    animation: shake-with-delay 6s infinite;
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+}
+
+@keyframes shake-with-delay {
+    from, 16%, to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    1.6%, 4.8%, 8%, 11.2%, 14.4% {
+        -webkit-transform: translate3d(-3px, 0, 0);
+        transform: translate3d(-3px, 0, 0);
+    }
+    3.2%, 6.4%, 9.6%, 12.8% {
+        -webkit-transform: translate3d(3px, 0, 0);
+        transform: translate3d(3px, 0, 0);
+    }
+}
+/* Animação */
+#panel-intro .explore{
+    text-align: center;
+    margin-top: 160px;
+}
+#panel-intro .explore h2{
+    margin-bottom: 50px;
+    margin-top: 0;
+    font-size: 25px;
+}
+#panel-intro .float-right{
+    transform: translateX(-100px);
+    transition: 2s all ease;
+    opacity: 0;
+}
+#panel-intro .float-right.show{
+    transform: translateX(0)!important;
+    opacity: 1!important;
+}
+
+/* Painel sobre o emprezaz */
+#panel-about{
+    /* background: linear-gradient(36deg, #52059d 2%, #330266 20%, #1d0046 50%, #330266 80%, #52059d 98%); */
+    /* background: linear-gradient(36deg, #4092f7 2%, #0074FF 20%, #003a80 50%, #0074FF 80%, #4092f7 98%); */
+    background: linear-gradient(36deg, rgba(64,146,247,1) 2%, rgba(1,82,180,1) 20%, rgba(0,63,140,1) 50%, rgba(1,82,180,1) 80%, rgba(64,146,247,1) 98%);
+    flex-direction: column;
+    justify-content: center;
+    min-height: 600px;
+    margin-top: -30px;
+}
+#panel-about .top-title hr{
+    background: linear-gradient(90deg, #005df56d 0%, #005df5 50%);
+}
+#panel-about .circle{
+    display: none;
+}
+#panel-about .boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+#panel-about .boxes *{
+    text-align: center;
+}
+#panel-about .boxes .box{
+    border-radius: 10px;
+    box-shadow: -2px -2px 3px #ffffff21;
+    padding: 10px 0;
+    margin: 15px 0;
+    width: 250px;
+}
+#panel-about .boxes .box h2{
+    font-size: 35px;
+    margin: 0;
+}
+#panel-about .boxes .box p{
+    margin: 0;
+    font-family: 'poppins light';
+}
+#panel-about .boxes .box .margined{
+    margin-left: 30px;
+}
+/* Animação */
+#panel-about .boxes .scale{
+    transform: scale(.7);
+    opacity: 0;
+    transition: 2s all ease;
+}
+#panel-about .boxes .scale.show{
+    transform: scale(1)!important;
+    opacity: 1!important;
+}
+
+/* Painel de clientes */
+#panel-customers{
+    background-image: url(../img/banner-2.png);
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#panel-customers .top-title hr{
+    background: linear-gradient(90deg, #ccb1d76d 0%, #ccb1d7 50%);
+}
+#panel-customers .boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#panel-customers .boxes *{
+    text-align: center;
+}
+#panel-customers .boxes .box{
+   width: 300px;
+}
+#panel-customers .boxes .box h2{
+    font-size: 40px; 
+}
+#panel-customers .boxes .box img{
+    width: 300px;
+}
+/* Animação */
+#panel-customers .slide-right:nth-child(1){
+    transform: translateX(-415px);
+}
+#panel-customers .slide-right:nth-child(2){
+    transform: translateX(-415px);
+}
+#panel-customers .slide-right:nth-child(3){
+    transform: translateX(-416px);
+}
+
+#panel-customers .slide-right{
+    transition: 2s all ease;
+    opacity: 0;
+}
+#panel-customers .slide-right.show{
+    transform: translateX(0)!important;
+    opacity: 1!important;
+}
+
+/* Painel de colaboradores */
+#panel-collaborators{
+    background-image: url(../img/banner-3.png);
+    min-height: 0;
+    padding: 40px 5%;
+}
+#panel-collaborators .text{
+    width: 100%;
+}
+#panel-collaborators .text *{
+    text-align: center;
+}
+#panel-collaborators .text h2{
+    font-size: 18px;
+}
+#panel-collaborators .text p {
+    font-size: 14px;
+}
+/* Animação */
+#panel-collaborators{
+    background-position: top;
+    transition: 2s all ease;
+}
+#panel-collaborators.show{
+    background-position: center;
+}
+#panel-collaborators div{
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+#panel-collaborators.show div{
+    transform: translateY(0)!important;
+    opacity: 1!important;
+}
+
+/* Painel de publico alvo */
+#panel-target{
+    background-image: url(../img/banner-4.png);
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#panel-target .top-title{
+    margin: 0;
+}
+#panel-target .top-title hr{
+    background: linear-gradient(90deg, #8fe9f46d 0%, #8fe9f4 50%);
+}
+
+#panel-target .boxes{
+    display: grid;
+    width: 100%;
+    margin: 20px 0;
+}
+#panel-target .boxes .box{
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#panel-target .boxes .box h2{
+    color: #424242;
+    margin: 0;
+    font-size: 20px;
+}
+#panel-target .boxes .box p{
+    font-size: 25px;
+    margin: 0;
+    color: #341673;
+}
+/* Animação */
+#panel-target .boxes .scale{
+    transform: scale(.7);
+    opacity: 0;
+    transition: 2s all ease;
+}
+#panel-target .boxes .scale.show{
+    transform: scale(1)!important;
+    opacity: 1!important;
+}
+
+/* Painel de contato */
+#panel-contact{
+    background-image: url(../img/banner-5.png);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+#panel-contact h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#panel-contact .btn-white{
+    background-color: #fff;
+    border: 1px solid transparent;
+    color: #341673;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 150px;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s all;
+}
+#panel-contact .btn-white:hover{
+    background-color: transparent;
+    color: #fff;
+    mix-blend-mode: screen;
+    border: 1px solid #fff;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+    
+    header{
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        padding: 10px 10%;
+        margin-bottom: -100px;
+    }
+    header .logo img{ 
+        width: 165px;
+    }
+    header .access{
+        display: block;
+        grid-column: 3/4;
+    }
+    .panel{
+        padding: 0 10%;
+    }
+    #panel-intro{
+        background-image: url(../img/waves-bg.jpg);
+        flex-direction: row;
+        /* background: #0074FF; */
+    }
+    .drag-down{
+        display: none;
+    }
+    
+    #panel-intro .explore{
+        text-align: start;
+        margin-top: 0;
+    }
+
+    /* Painel sobre o emprezaz */
+    #panel-about .circle{
+        display: none;
+    }
+
+    .top-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .top-title h2{
+        text-align: start;
+        font-size: 30px;
+    }
+    hr{
+        border: none;
+        height: 2px;
+        width: 150%;
+        margin-left: -50px;
+    }
+
+    #panel-about .boxes{
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 20px 0;
+    }
+    #panel-about .boxes .box h2{
+        font-size: 40px;
+        margin: 0;
+    }
+    #panel-about .boxes *{
+        text-align: start;
+    }
+    #panel-about .boxes .box{
+        padding: 20px;
+        width: 25%;
+    }
+    
+    /* Painel de clientes */
+    #panel-customers .boxes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    #panel-customers .boxes *{
+        text-align: start;
+    }
+    #panel-customers .boxes .box h2{
+        font-size: 30px; 
+        min-height: 75px;
+    }
+    /* Animação */
+    #panel-customers .slide-right:nth-child(1){
+        transform: translateX(0);
+    }
+    #panel-customers .slide-right:nth-child(2){
+        transform: translateX(-415px);
+    }
+    #panel-customers .slide-right:nth-child(3){
+        transform: translateX(-830px);
+    }
+    #panel-customers .slide-right{
+        transition: 2s all ease;
+        opacity: 0;
+    }
+    #panel-customers .slide-right.show{
+        transform: translateX(0)!important;
+        opacity: 1!important;
+    }
+
+    /* Painel de colaboradores */
+
+    #panel-collaborators{
+        min-height: 700px;
+        padding: 0 10%;
+    }
+    #panel-collaborators .text{
+        width: 45%;
+    }
+    #panel-collaborators .text *{
+        text-align: start;
+    }
+    #panel-collaborators .text h2{
+        font-size: 30px;
+    }
+    #panel-collaborators .text p {
+        font-size: 18px;
+    }
+    /* Animação */
+    #panel-collaborators{
+        transition: 4s all ease;
+    }
+    #panel-collaborators div{
+        transform: translateY(100px);
+        transition: 4s all ease;
+    }
+
+    /* Painel de publico alvo */
+    #panel-target .boxes{
+        grid-template-columns: 1fr 1fr;
+    }
+    #panel-target .boxes .box{
+        border-radius: 10px;
+        box-shadow: -2px -2px 3px #3f3f3f65;
+        text-align: start;
+        margin: 30px 0;
+    }
+    #panel-target .boxes .box-left{
+        margin-right: 15px;
+    }
+    #panel-target .boxes .box-right{
+        margin-left: 15px;
+    }
+    #panel-target .boxes .box h2{
+        font-size: 24px;
+    }
+    #panel-target .boxes .box p{
+        font-size: 40px;
+        margin: 0;
+        color: #341673;
+    }
+
+    /* Painel de contato */
+    #panel-contact{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 550px;
+    }
+    #panel-contact h2{
+        font-size: 30px;
+        text-align: start;
+    }
+    /* Animação */
+    #panel-contact{
+        background-size: inherit;
+        background-position-x: left;
+        background-position-y: bottom;
+        transition: 4s all ease;
+    }
+    #panel-contact.show{
+        background-position-x: center;
+        background-position-y: center;
+    }
+    #panel-contact .btn-white{
+        width: 200px;
+        font-size: 20px;
+    }
+}
+
+/* FONTES */
+@font-face {
+    font-family: 'poppins';
+    src: url(../libs/fonts/poppins/poppins-regular.ttf);
+}
+@font-face {
+    font-family: 'poppins light';
+    src: url(../libs/fonts/poppins/poppins-light.ttf);
+}
+@font-face {
+    font-family: 'poppins bold';
+    src: url(../libs/fonts/poppins/poppins-bold.ttf);
+}
+@font-face{
+    font-family: 'poppins black';
+    src: url(../libs/fonts/poppins/poppins-black.ttf);
+}
+@font-face {
+    font-family: 'poppins bold italic';
+    src: url(../libs/fonts/poppins/poppins-bolditalic.ttf);
+}
+@font-face {
+    font-family: 'poppins thin';
+    src: url(../libs/fonts/poppins/poppins-thin.ttf);
+}
+@font-face{
+    font-family: 'poppins italic';
+    src: url(../libs/fonts/poppins/poppins-italic.ttf);
+}
+@font-face{
+    font-family: 'montserrat black';
+    src: url(../libs/fonts/Montserrat/Montserrat-Black.ttf);
+}
+@font-face{
+    font-family: 'montserrat regular';
+    src: url(../libs/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face{
+    font-family: 'montserrat thin';
+    src: url(../libs/fonts/Montserrat/Montserrat-Thin.ttf);
+}
+.montserrat-black,
+.montserrat-black font font{
+    font-family: 'montserrat black';
+}
+
+.montserrat-regular,
+.montserrat-regular font font{
+    font-family: 'montserrat regular';
+}
+
+.montserrat-thin,
+.montserrat-thin font font{
+    font-family: 'montserrat thin';
+}
+.font-regular,
+.font-regular font font{
+    font-family: 'poppins'!important;
+}
+.font-light,
+.font-light font font{
+    font-family: 'poppins light'!important;
+}
+.font-thin,
+.font-thin font font{
+    font-family: 'poppins thin'!important;
+    letter-spacing: 1px;
+}
