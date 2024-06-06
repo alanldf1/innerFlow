@@ -80,23 +80,32 @@ function isVisible(ele) {
 animations();
 
 function counter(){
-    var client = 0
-    var year   = 0
+    var plans = 0
+    var brazilians   = 0
+    var meis = 0
     
-    var intervalYear = setInterval(function(){
-        year++
-        document.querySelector('.year-count').textContent = year
-        if(year == 38) {
-            clearInterval(intervalYear)
+    var intervalPlans = setInterval(function(){
+        plans++
+        document.querySelector('.plans-count').textContent = plans
+        if(plans == 38) {
+            clearInterval(intervalPlans)
         }
     }, 70)
     
     var intervalClient = setInterval(function(){
-        client++
-        document.querySelector('.client-count').textContent = client
-        if(client == 75) {
+        brazilians++
+        document.querySelector('.brazilians-count').textContent = brazilians
+        if(brazilians == 75) {
             clearInterval(intervalClient)
         }
     }, 35)    
+
+    var intervalMeis = setInterval(function(){
+        meis++
+        document.querySelector('.meis-count').textContent = meis
+        if(meis == 93) {
+            clearInterval(intervalMeis)
+        }
+    }, 27)   
 }
 
