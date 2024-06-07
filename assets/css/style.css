@@ -43,7 +43,7 @@ header .access button{
 .btn-outline-transparent:hover{
     background-color: #fff;
     border: 2px solid transparent;
-    color: #341673;
+    color: #033978;
 }
 .panel{
     min-height: 700px;
@@ -56,14 +56,14 @@ header .access button{
 }
 .top-title{
     width: 100%;
-    margin: 40px 0;
+    margin: 20px 0 40px 0;
 }
 .top-title h2{
     text-align: center;
     font-size: 20px;
 }
 .white-bk .top-title h2{
-    color: #341673;
+    color: #033978;
 }
 hr{
     border: none;
@@ -139,7 +139,7 @@ hr{
 #panel-intro .explore h2{
     margin-bottom: 50px;
     margin-top: 0;
-    font-size: 25px;
+    font-size: 35px;
 }
 #panel-intro .float-right{
     transform: translateX(-100px);
@@ -212,10 +212,11 @@ hr{
     flex-direction: column;
     justify-content: center;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 8%;
+    min-height: auto;
 }
 #panel-customers .top-title hr{
-    background: linear-gradient(90deg, #ccb1d76d 0%, #ccb1d7 50%);
+    background: linear-gradient(90deg, #ccb1d76d 0%, #6061af 50%);
 }
 #panel-customers .boxes{
     display: flex;
@@ -234,7 +235,7 @@ hr{
     font-size: 40px; 
 }
 #panel-customers .boxes .box img{
-    width: 300px;
+    width: 100%;
 }
 /* Animação */
 #panel-customers .slide-right:nth-child(1){
@@ -258,7 +259,7 @@ hr{
 
 /* Painel de colaboradores */
 #panel-collaborators{
-    background-image: url(../img/banner-3.png);
+    background-image: url(../img/banner-3.jpg);
     min-height: 0;
     padding: 40px 5%;
 }
@@ -294,7 +295,7 @@ hr{
 
 /* Painel de publico alvo */
 #panel-target{
-    background-image: url(../img/banner-4.png);
+    background: linear-gradient(13deg, rgba(0,116,255,0.4192051820728291) 0%, rgba(61,145,247,0.3575805322128851) 4%, rgba(62,145,247,0.1783088235294118) 18%, rgba(64,146,247,0) 47%, rgba(63,145,247,0.13068977591036413) 79%, rgba(62,145,247,0.3603816526610645) 94%, rgba(0,116,255,0.31556372549019607) 100%);
     flex-direction: column;
     justify-content: center;
     padding-top: 5%;
@@ -326,7 +327,7 @@ hr{
 #panel-target .boxes .box p{
     font-size: 25px;
     margin: 0;
-    color: #341673;
+    color: #033978;
 }
 /* Animação */
 #panel-target .boxes .scale{
@@ -355,7 +356,7 @@ hr{
 #panel-contact .btn-white{
     background-color: #fff;
     border: 1px solid transparent;
-    color: #341673;
+    color: #033978;
     border-radius: 15px;
     padding: 10px 20px;
     width: 150px;
@@ -394,6 +395,9 @@ hr{
         background-image: url(../img/waves-bg.jpg);
         flex-direction: row;
         /* background: #0074FF; */
+    }
+    #panel-intro .explore h2{
+        font-size: 45px;
     }
     .drag-down{
         display: none;
@@ -454,6 +458,9 @@ hr{
     #panel-customers .boxes *{
         text-align: start;
     }
+    #panel-customers .boxes .box{
+        width: 600px;
+     }
     #panel-customers .boxes .box h2{
         font-size: 30px; 
         min-height: 75px;
@@ -526,7 +533,7 @@ hr{
     #panel-target .boxes .box p{
         font-size: 40px;
         margin: 0;
-        color: #341673;
+        color: #033978;
     }
 
     /* Painel de contato */
